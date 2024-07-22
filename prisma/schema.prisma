@@ -20,8 +20,8 @@ model User{
   password String 
   isVerified Boolean? @default(false)
   isAdmin Boolean? @default(false)
-  forgotPasswordToken String?
+  forgotPasswordToken String? @unique
   forgotPasswordTokenExpiry DateTime?
-  verifyToken String?
+  verifyToken String? @unique
   verifyTokenExpiry DateTime?
 }

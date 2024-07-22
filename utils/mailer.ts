@@ -28,7 +28,7 @@ export async function sendEmail({
         },
       });
     } else if (emailType === "RESET") {
-      await prisma.user.update({
+      const updated = await prisma.user.update({
         where: {
           id: userId,
         },
@@ -37,14 +37,15 @@ export async function sendEmail({
           forgotPasswordTokenExpiry: date,
         },
       });
+      console.log(updated);
     }
 
     const transport = nodemailer.createTransport({
       host: "sandbox.smtp.mailtrap.io",
       port: 2525,
       auth: {
-        user: "26a807fe27893c",
-        pass: "6f3f5e2b63db73",
+        user: "",
+        pass: "",
       },
     });
 

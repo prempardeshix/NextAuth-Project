@@ -6,7 +6,7 @@ import { sendEmail } from "@/utils/mailer";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    console.log(body);
+    // console.log(body);
     const {
       username,
       email,
@@ -35,6 +35,8 @@ export async function POST(req: NextRequest) {
         password: hashedPassword,
       },
     });
+
+    // console.log(done);
 
     await sendEmail({ email, emailType: "VERIFY", userId: done.id });
     return NextResponse.json({

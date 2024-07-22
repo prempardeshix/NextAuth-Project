@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@prisma/client": "^5.17.0",
+    "@types/axios": "^0.14.0",
     "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
     "next": "14.2.5",
     "nodemailer": "^6.9.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",
